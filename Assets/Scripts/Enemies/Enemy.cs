@@ -32,6 +32,7 @@ public class Enemy : Movement
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        
         playerLastPos = player.position;
         startPos = transform.position;
         lastFollowTime = Time.time;
@@ -141,7 +142,7 @@ public class Enemy : Movement
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("MagicCrystal"))
         {
             damageCooldownTimer = Time.time + damageCooldown;
 

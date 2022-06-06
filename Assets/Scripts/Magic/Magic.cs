@@ -84,7 +84,8 @@ public class Magic : MonoBehaviour
             DeactiveMagic();
         }
 
-        if (collision.CompareTag("Blocking"))
+        if (collision.CompareTag("Blocking") ||
+            collision.CompareTag("MagicCrystal"))
         {
             rb.velocity = Vector2.zero;
 

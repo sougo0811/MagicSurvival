@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField]
     private int maxHealth = 5;
     private int health;
+    //private int crystalHealth;
     private Animator animator;
 
     [SerializeField]
@@ -20,6 +21,8 @@ public class Health : MonoBehaviour
 
     private float timer;
 
+    public SceneController sceneController;
+    //public GameObject player;
 
     private void Awake()
     {
@@ -30,6 +33,9 @@ public class Health : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+        //crystalHealth = maxHealth;
+
+        //player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public bool IsAllive()
@@ -48,7 +54,17 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            animator.SetTrigger("Death");
+            if (GameObject.FindGameObjectWithTag("Player"))
+            {
+                animator.SetTrigger("Death");
+
+                Debug.Log(Time.timeScale);
+            }
+            else
+            {
+                
+            }
+            
         }
     }
 
@@ -60,9 +76,21 @@ public class Health : MonoBehaviour
         {
             magicPoint += 1;
             timer = 0f;
-
-            Debug.Log(magicPoint);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CallSceneController();
+        }
+
+    }
+
+    public void CallSceneController()
+    {
+        if (health <= 0)
+        {
+            sceneController.ToGameOver();
+            Debug.Log("Called ToGameOver");
+        }
     }
 }
