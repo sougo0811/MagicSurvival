@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -662451123
+  m_SortingLayerID: -527945337
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 830317617348258784, guid: 63a0729b91fbfc24ab4a6108bcc45043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -171,7 +171,7 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -662451123
+  m_SortingLayerID: -527945337
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Time: 0.4
@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b972b95fd5d12dd4e95f78e7a251e1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
-  deactiveTimer: 3
-  damageAmount: 25
+  moveSpeed: 5
+  deactiveTimer: 1.5
+  damageAmount: 5
   destroyObject: 0
   getTrailRanderer: 1

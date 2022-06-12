@@ -20,7 +20,21 @@ public class SceneController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                ToMain();
+                Debug.Log("Space");
+                ToMenu();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ToAttackMode();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                ToDefenseMode();
             }
         }
 
@@ -28,7 +42,7 @@ public class SceneController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                ToMain();
+                ToMenu();
             }
         }
 
@@ -49,6 +63,21 @@ public class SceneController : MonoBehaviour
     public void ToMain()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void ToAttackMode()
+    {
+        SceneManager.LoadScene("AttackMode1-1");
+    }
+
+    public void ToDefenseMode()
+    {
+        SceneManager.LoadScene("DefenseMode1-1");
     }
 
     public void ToGameOver()

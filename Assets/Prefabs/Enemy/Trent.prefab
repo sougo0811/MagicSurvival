@@ -74,10 +74,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1137342955
+  m_SortingLayerID: -1469898709
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5174045563640249603, guid: 75e3621d355191b43b7995aa1ff473ae, type: 3}
+  m_Sprite: {fileID: -5174045563640249603, guid: 75e3621d355191b43b7995aa1ff473ae,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -183,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  maxMagicPoint: 10
+  magicCoolTimer: 3
 --- !u!114 &6923217541510900198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 1.5
   ySpeed: 1.5
-  Test: 1
   chaseSpeed: 0.8
   turningDelay: 1
   damageCooldown: 1

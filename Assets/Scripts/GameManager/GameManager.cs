@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    public float limitTimer = 10f;
+    public float limitTimer = 100f;
     public float timer;
 
     [SerializeField]
-    private Health playerHealth,magicCrystalHealth;
+    private PlayerHealth playerHealth,magicCrystalHealth;
 
     public SceneController sceneController;
+
+    public Text timerText;
 
     // Start is called before the first frame update
     void Start()
     {
+        timerText.text = limitTimer.ToString("f1");
         timer = limitTimer;
     }
 
@@ -23,7 +27,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        Debug.Log(timer);
+        if (timer >= 0)
+        {
+            timerText.text = timer.ToString("f1");
+        }
+        else
+        {
+            timerText.text = "CLEAR!";
+        }
+        //Debug.Log(timer);
 
         if (!playerHealth.IsAllive())
         {
@@ -37,7 +49,7 @@ public class GameManager : MonoBehaviour
 
         if (timer <= 0)
         {
-            Invoke("CalledToGameClear", 1f);
+            Invoke("CalledToGameClear", 0.5f);
         }
 
     }

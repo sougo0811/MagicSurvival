@@ -4738,6 +4738,8 @@ MonoBehaviour:
   shootTimer: 0
   shootTimeDelay: 0.2
   magicSpawnPos: {fileID: 1567879286}
+  playerHealth: {fileID: 0}
+  magicPoint: 0
 --- !u!114 &281939963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4751,6 +4753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  maxMagicPoint: 10
+  magicCoolTimer: 3
 --- !u!1 &283885130
 GameObject:
   m_ObjectHideFlags: 0

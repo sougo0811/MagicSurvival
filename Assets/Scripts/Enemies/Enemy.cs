@@ -148,7 +148,7 @@ public class Enemy : Movement
 
             attacked = true;
 
-            collision.GetComponent<Health>().TakeDamage(damageAmount);
+            collision.GetComponent<PlayerHealth>().TakeDamage(damageAmount);
         }
     }
 

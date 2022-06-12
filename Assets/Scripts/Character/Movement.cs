@@ -11,10 +11,16 @@ public class Movement : MonoBehaviour
     private Vector2 moveDelta;
 
     private bool _hasPlayerTarget;
+    private bool _hasMagicCrystalTarget;
     public bool HasPlayerTarget
     {
         get { return _hasPlayerTarget; }
         set { _hasPlayerTarget = value; }
+    }
+    public bool HasMagiCrystalTarget
+    {
+        get { return _hasMagicCrystalTarget; }
+        set { _hasMagicCrystalTarget = value; }
     }
 
     protected void CharacterMovement(float x, float y)

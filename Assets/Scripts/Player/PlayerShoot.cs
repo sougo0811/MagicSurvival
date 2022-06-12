@@ -14,8 +14,11 @@ public class PlayerShoot : MonoBehaviour
     private Transform magicSpawnPos;
     private PlayerMagicSquareManager playerMagicSquareManager;
 
-    public Health health;
+    public PlayerHealth playerHealth;
     public int magicPoint;
+
+    [SerializeField]
+    private bool defenseModeflg;
 
     private void Awake()
     {
@@ -36,7 +39,7 @@ public class PlayerShoot : MonoBehaviour
 
                 magicPoint -= 1;
 
-                health.magicPoint = magicPoint;
+                playerHealth.magicPoint = magicPoint;
             }
         }
     }
@@ -44,14 +47,14 @@ public class PlayerShoot : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        magicPoint = health.magicPoint;
-        Debug.Log(health.magicPoint);
+        magicPoint = playerHealth.magicPoint;
+        Debug.Log(playerHealth.magicPoint);
     }
 
     // Update is called once per frame
      private void Update()
     {
-        magicPoint = health.magicPoint;
+        magicPoint = playerHealth.magicPoint;
         Shooting();
         
     }

@@ -5,36 +5,33 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     //このスクリプトの役割
-    //全キャラの体力管理や死亡アニメーション+魔力管理
+    //プレイヤーの体力管理や死亡アニメーション+魔力管理
 
     [SerializeField]
-    private int maxHealth = 5;
+    private int maxHealth = 10;
     private int health;
     //private int crystalHealth;
     private Animator animator;
 
     [SerializeField]
     private int maxMagicPoint = 10;
-    public int magicPoint;
+    private int magicPoint;
     [SerializeField]
     private float magicCoolTimer = 3f;
 
     private float timer;
 
-    public SceneController sceneController;
-    //public GameObject player;
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        magicPoint = maxMagicPoint;
     }
 
     private void Start()
     {
         health = maxHealth;
-        //crystalHealth = maxHealth;
+        magicPoint = maxMagicPoint;
 
+        //crystalHealth = maxHealth;
         //player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -51,20 +48,13 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
-
         if (health <= 0)
         {
-            if (GameObject.FindGameObjectWithTag("Player"))
+            if (GameObject.FindGameObjectWithTag("Enemy"))
             {
                 animator.SetTrigger("Death");
+            }
 
-                Debug.Log(Time.timeScale);
-            }
-            else
-            {
-                
-            }
-            
         }
     }
 
@@ -76,21 +66,6 @@ public class Health : MonoBehaviour
         {
             magicPoint += 1;
             timer = 0f;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            CallSceneController();
-        }
-
-    }
-
-    public void CallSceneController()
-    {
-        if (health <= 0)
-        {
-            sceneController.ToGameOver();
-            Debug.Log("Called ToGameOver");
         }
     }
 }

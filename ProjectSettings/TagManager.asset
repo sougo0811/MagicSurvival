@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Blocking
-  - Magic
-  - Enemy
-  - Boss
-  - GameOverPanel
-  - GameClearPanel
   - MagicCrystal
+  - Enemy
+  - Magic
+  - Blocking
+  - Boss
+  - Spawner
   layers:
   - Default
   - TransparentFX
@@ -20,7 +19,6 @@ TagManager:
   - UI
   - Blocking
   - Enemy
-  - MagicCrystal
   - 
   - 
   - 
@@ -33,8 +31,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -49,17 +48,17 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Level
-    uniqueID: 1325967393
+    uniqueID: 4189426099
     locked: 0
   - name: Magic
-    uniqueID: 3632516173
+    uniqueID: 3767021959
     locked: 0
   - name: Enemy
-    uniqueID: 1137342955
+    uniqueID: 2825068587
     locked: 0
   - name: Player
-    uniqueID: 133135375
+    uniqueID: 1587728603
     locked: 0
   - name: UI
-    uniqueID: 4157609447
+    uniqueID: 53442993
     locked: 0
