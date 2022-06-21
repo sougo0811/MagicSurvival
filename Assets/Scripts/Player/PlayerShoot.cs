@@ -15,6 +15,7 @@ public class PlayerShoot : MonoBehaviour
     private PlayerMagicSquareManager playerMagicSquareManager;
 
     public PlayerHealth playerHealth;
+    public MagicCrystalHealth magicCrystalHealth;
     public int magicPoint;
 
     [SerializeField]
@@ -40,6 +41,7 @@ public class PlayerShoot : MonoBehaviour
                 magicPoint -= 1;
 
                 playerHealth.magicPoint = magicPoint;
+                magicCrystalHealth.magicPoint = magicPoint;
             }
         }
     }

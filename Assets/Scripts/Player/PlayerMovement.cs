@@ -68,18 +68,6 @@ public class PlayerMovement : Movement
         DirectionMagicSquare(x, y);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void DirectionMagicSquare(float x, float y)
     {
         //Side

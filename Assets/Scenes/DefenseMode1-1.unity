@@ -56848,6 +56848,7 @@ MonoBehaviour:
   shootTimeDelay: 0.2
   magicSpawnPos: {fileID: 1567879286}
   playerHealth: {fileID: 281939963}
+  magicCrystalHealth: {fileID: 485080265}
   magicPoint: 0
   defenseModeflg: 1
 --- !u!114 &281939963
@@ -56862,7 +56863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5441368bdd76947a22d2844955f10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 15
   health: 0
   maxMagicPoint: 10
   magicPoint: 0
@@ -57790,7 +57791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e3a964293d2d4487f542fa0ae8ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 15
   health: 0
   maxMagicPoint: 10
   magicPoint: 0
