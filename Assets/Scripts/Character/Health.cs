@@ -21,9 +21,12 @@ public class Health : MonoBehaviour
 
     private float timer;
 
+    //Collider2D boxCollider;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        //boxCollider = GetComponent<Collider2D>();
     }
 
     private void Start()
@@ -52,6 +55,7 @@ public class Health : MonoBehaviour
         {
             if (GameObject.FindGameObjectWithTag("Enemy"))
             {
+                //boxCollider.isTrigger = true;
                 animator.SetTrigger("Death");
             }
 
